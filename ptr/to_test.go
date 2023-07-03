@@ -1,6 +1,10 @@
 package ptr
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"testing"
+)
 
 func ExampleToObj() {
 	type test struct {
@@ -22,4 +26,25 @@ func ExampleToString() {
 func ExampleToString_empty() {
 	fmt.Println(ToString(nil))
 	// Output:
+}
+
+var globStr string
+
+func BenchmarkToString(b *testing.B) {
+	var res string
+	b.Run("ToObj", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			str := String("Hello" + strconv.Itoa(i))
+			res = ToObj(str)
+		}
+		globStr = res
+	})
+
+	b.Run("ToString", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			str := String("Hella" + strconv.Itoa(i))
+			res = ToString(str)
+		}
+		globStr = res
+	})
 }

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"testing"
+
 	"github.com/stretchr/testify/assert"
 )
 
@@ -50,12 +51,10 @@ func ExampleObj_struct() {
 
 func TestObj(t *testing.T) {
 	testcases := []struct {
-		name string
-		obj any
+		name   string
+		obj    any
 		expect any
-	} {
-
-	}
+	}{}
 	for _, tc := range testcases {
 		t.Run(tc.name, func(t *testing.T) {
 			got := Obj(tc.obj)
@@ -84,3 +83,4 @@ func BenchmarkObjLiteral(b *testing.B) {
 		glob = x
 	})
 }
+
