@@ -6,8 +6,9 @@ Highly opinionated lib that contains utility functions.
 - **ptr/**: Conversion of object from and to pointer values (one-liners without nil checks)
 - **auth/**: Passing tokens across app layers with `context.Context`
 ## Motivation
-Some actions are repeated **too** often that I've decided to extract them into a separate repository.
-> Though, I try to keep pkg level code for all projects in the `pkg/` directory as advised in many project structure layout guides in golang, the repetition got too much.
+Some verbose operations in Golang can distract and take one's mind off the business logic and to solve this, I create util functions to `pkg/` to reduce repetition. This was okay, until I had to work on many HTTP projects.  
+  
+I have created this package to reduce repetitive copying of my `pkg/` helper functions from project to project.
  
 ## Inspiration
 ### Package Naming
