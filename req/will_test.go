@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/lordvidex/errs"
+	"github.com/lordvidex/errs/v2"
 
 	"github.com/lordvidex/x/auth"
 	"github.com/lordvidex/x/ptr"

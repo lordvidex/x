@@ -8,7 +8,7 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator/v10"
-	"github.com/lordvidex/errs"
+	"github.com/lordvidex/errs/v2"
 
 	"github.com/lordvidex/x/auth"
 )

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/lordvidex/errs"
+	"github.com/lordvidex/errs/v2"
 )
 
 type ErrorRes struct {
